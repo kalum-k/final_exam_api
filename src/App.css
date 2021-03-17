@@ -79,6 +79,7 @@ h1 {
 
 .card-list {
     column-count: 3;
+    column-span: all;
 }
 
 @media (min-width: 768px) {

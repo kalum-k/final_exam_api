@@ -18,8 +18,8 @@ export default function SearchPhotos() {
     //searchphoto 
     const searchPhotos = async (e) => {
         e.preventDefault(); //ใช้หยุดการเกิดเหตุการณ์ใดๆขึ้น ที่เป็นเหตุการณ์ของ browser 
-                            //คือเหตุการณ์ที่ไม่ได้เกิดขึ้นจากการที่เรากำหนดให้มัน
-                            //เช่น จะไม่ link ไปยังหน้าถัดไปของการ click tag a
+        //คือเหตุการณ์ที่ไม่ได้เกิดขึ้นจากการที่เรากำหนดให้มัน
+        //เช่น จะไม่ link ไปยังหน้าถัดไปของการ click tag a
         unsplash.search
             .photos(query)
             .then(toJson)
@@ -51,32 +51,47 @@ export default function SearchPhotos() {
         </button>
             </form>
             <Container>
-            <from >
-                <div class="row">
-                    <div class="col">
-                        {pics.map((pic) => (
-                            <div key={pic.id}>
-                                <section class="photo">
-                                    <header class="photo__header">
-                                        <div class="photo__header-color">
-                                            <a href={"/profile/" + pic.user.username} >
-                                                <img class="photo__avatar" src={pic.user.profile_image.medium} />
-                                            </a>
-                                        </div>
-                                        <div class="photo__header-column">
-                                            <span class="photo__username"><h2><a href={"/profile/" + pic.user.username} >{pic.user.username}</a></h2></span>
-                                        </div>
-                                    </header>
-                                    <div class="photo__file-container">
-                                        <img class="photo__file" src={pic.urls.raw} />
-                                    </div>
-                                </section>
-                            </div>
-                        ))}{" "}
+                <from >
+                    <div class="row">
+                        <div class="col">
+                            {pics.map((pic) => (
+                                <div key={pic.id}>
 
-                    </div></div>
-            </from>
-</Container>
+                                    <section class="photo">
+
+                                        <header class="photo__header">
+                                            <div class="photo__header-color">
+                                                <a href={"/profile/" + pic.user.username} >
+                                                    <img class="photo__avatar" src={pic.user.profile_image.medium} />
+                                                </a>
+                                            </div>
+                                            <div class="photo__header-column">
+                                                <span class="photo__username"><h2><a href={"/profile/" + pic.user.username} >{pic.user.username}</a></h2></span>
+                                            </div>
+                                        </header>
+
+
+                                        <div className="card" key={pic.id}>
+                                            <img
+                                                className="card--image"
+                                                alt={pic.alt_description}
+                                                src={pic.urls.full}
+                                                width="50%"
+                                                height="50%"
+                                            ></img>
+                                        </div>
+
+
+                                    </section>
+                                </div>
+
+                            ))}{" "}
+
+                        </div>
+                    </div>
+
+                </from>
+            </Container>
 
         </>
     );

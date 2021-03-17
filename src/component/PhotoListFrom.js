@@ -23,16 +23,22 @@ const UserProfileFrom = ({ username }) => {
     return (
         <Container>
             <form>
-                <div className="row">
+                <div className="card-list">
+
                     {pics.map(pics => (
-                        <div key={pics.id}>
-                            <section className="photo">
-                                <div className="card-list" tabindex="0">
-                                    <img src={pics.urls.small} className="gallery-image" alt=""></img>
-                                </div>
-                            </section>
-                        </div >
+
+                        <div className="card" key={pics.id}>
+                            <img
+                                className="card--image"
+                                alt={pics.alt_description}
+                                src={pics.urls.small}
+                                width="50%"
+                                height="50%"
+                            ></img>
+                        </div>
+
                     ))}
+
                 </div>
             </form >
         </Container>
