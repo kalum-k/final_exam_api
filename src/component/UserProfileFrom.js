@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
+import { Container } from "reactstrap";
 /*import { faHeart,faComment,faShare } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";*/
 
@@ -17,24 +18,27 @@ const UserProfileFrom = ({ username }) => {
         });
     }, [username])
     return (
-        <form>
-            <div class="profile" >
-                {userprofile.map(user =>
-                    <div key={user.id}>
-                        <p class="profile-image" ><img src={user.profile_image.medium} class="profile-image" alt="Avatar"></img>
-                            <h2>{user.id}</h2></p>
-                        <hr></hr>
-                        <div>
-                            <p>{user.bio}</p>
-                            <p><span>{user.total_photos}</span>photos</p>
-                            <p><span>{user.total_likes}</span>  Like</p>
+        <Container>
+            <form>
+                <div class="profile" >
+                    {userprofile.map(user =>
+                        <div key={user.id}>
+                            <p class="profile-image" ><img src={user.profile_image.medium} class="profile-image" alt="Avatar"></img>
+                            </p>  
+                            <h2>{user.name}</h2>
+                            <hr></hr>
+                            <div>
+                                <p>{user.bio}</p>
+                                <p><span>{user.total_photos}</span>photos</p>
+                                <p><span>{user.total_likes}</span>  Like</p>
+                            </div>
+                            <hr></hr>
                         </div>
-                        <hr></hr>
-                    </div>
-                )}
-            </div>
+                    )}
+                </div>
 
-        </form>
+            </form>
+        </Container>
     );
 }
 export default UserProfileFrom;
