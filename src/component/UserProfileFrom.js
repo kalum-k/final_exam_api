@@ -28,9 +28,9 @@ const UserProfileFrom = ({ username }) => {
                             <h2>{user.name}</h2>
                             <hr></hr>
                             <div>
-                                <p>{user.bio}</p>
-                                <p><span>{user.total_photos}</span>photos</p>
-                                <p><span>{user.total_likes}</span>  Like</p>
+                                <p> 📓 {user.bio}</p>
+                                <p><span> 📷 {user.total_photos}</span> photos</p>
+                                 <p><span>❤️ {user.total_likes}</span>  Like</p>
                             </div>
                             <hr></hr>
                         </div>
