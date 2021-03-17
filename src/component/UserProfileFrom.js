@@ -23,7 +23,7 @@ const UserProfileFrom = ({ username }) => {
                 <div class="profile" >
                     {userprofile.map(user =>
                         <div key={user.id}>
-                            <p class="profile-image" ><img src={user.profile_image.medium} class="profile-image" alt="Avatar"></img>
+                            <p class="profile-image" ><img src={user.profile_image.medium}  class="profile-image" alt="Avatar"></img>
                             </p>  
                             <h2>{user.name}</h2>
                             <hr></hr>

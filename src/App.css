@@ -107,7 +107,6 @@ h1 {
     border: 1px solid rgba(0, 0, 0, 0.0975);
     max-width: 400px;
     margin-bottom: 0;
-    
 
     
   }
@@ -204,8 +203,17 @@ h1 {
   .photo__add-comment:focus {
     outline: none;
   }
-  
-  .heart-red {
+  .profile-image {
+    float: left;
+    width: calc(33.333% - 1rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 3rem;
+    border-radius: 40%;
+    
+}
+eart-red {
     color: red;
   }
   .photo {
@@ -215,4 +223,5 @@ h1 {
     border: 1px solid rgba(0, 0, 0, 0.0975);
     max-width: 400px;
     margin-bottom: 40px;
+    
   }

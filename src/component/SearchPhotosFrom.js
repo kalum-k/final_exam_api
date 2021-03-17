@@ -58,7 +58,7 @@ export default function SearchPhotos() {
                                 <div key={pic.id}>
 
                                     <section class="photo">
-
+                                    <div className="card-list"></div>
                                         <header class="photo__header">
                                             <div class="photo__header-color">
                                                 <a href={"/profile/" + pic.user.username} >
@@ -66,7 +66,11 @@ export default function SearchPhotos() {
                                                 </a>
                                             </div>
                                             <div class="photo__header-column">
-                                                <span class="photo__username"><h2><a href={"/profile/" + pic.user.username} >{pic.user.username}</a></h2></span>
+                                                <span class="photo__username">
+                                                    <h2>
+                                                        <a href={"/profile/" + pic.user.username} >{pic.user.username}</a>
+                                                    </h2>
+                                                </span>
                                             </div>
                                         </header>
 
