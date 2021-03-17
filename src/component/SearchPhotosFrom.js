@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Container } from "reactstrap";
 import Unsplash, { toJson } from "unsplash-js";
 /*import { faHeart,faComment,faShare } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";*/
@@ -49,6 +50,7 @@ export default function SearchPhotos() {
                     Search
         </button>
             </form>
+            <Container>
             <from >
                 <div class="row">
                     <div class="col">
@@ -74,7 +76,7 @@ export default function SearchPhotos() {
 
                     </div></div>
             </from>
-
+</Container>
 
         </>
     );
