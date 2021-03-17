@@ -18,7 +18,7 @@ const UserProfileFrom = ({ username }) => {
         });
     }, [username])
     return (
-        <Container>
+        
             <form>
                 <div class="profile" >
                     {userprofile.map(user =>
@@ -38,7 +38,7 @@ const UserProfileFrom = ({ username }) => {
                 </div>
 
             </form>
-        </Container>
+      
     );
 }
 export default UserProfileFrom;
